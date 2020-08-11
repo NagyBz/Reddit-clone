@@ -17,7 +17,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class Post {
 
     @javax.persistence.Id
-    @Id
     @GeneratedValue(strategy = IDENTITY)
     private  Long postId;
 

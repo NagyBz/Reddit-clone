@@ -19,7 +19,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name= "token")
 public class VerificationToken {
-    @Id
+    @javax.persistence.Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 

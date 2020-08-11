@@ -18,7 +18,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Builder
 public class Vote {
-    @Id
+    @javax.persistence.Id
     @GeneratedValue(strategy = IDENTITY)
     private Long voteId;
     private VoteType voteType;

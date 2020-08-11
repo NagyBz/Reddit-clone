@@ -17,10 +17,9 @@ import static javax.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor
 @Builder
 public class Subreddit {
-
-    @Id
+    @javax.persistence.Id
     @GeneratedValue(strategy = IDENTITY)
-    private Long id;
+    private Long Id;
 
     @NotBlank(message="Community name is required")
     private String name;
@@ -34,6 +33,7 @@ public class Subreddit {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
+
 
 
 }
