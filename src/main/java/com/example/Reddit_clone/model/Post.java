@@ -6,6 +6,8 @@ import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 
 @Data
 @Entity
@@ -13,10 +15,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Post {
+
     @javax.persistence.Id
     @Id
-    @Generated
-    private  Long id;
+    @GeneratedValue(strategy = IDENTITY)
+    private  Long postId;
 
    // @NotBlank(message='Post Name cannot be empty')
     private String postName;
